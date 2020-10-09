@@ -21,17 +21,17 @@ const {
 
 module.exports = {
   plugins: [{
-      resolve: "gatsby-source-contentful",
-      options: {
-        spaceId,
-        accessToken
-      }
-    },
-    {
-      resolve: `gatsby-plugin-styled-components`,
-      options: {
-        // Add any options here
-      },
+    resolve: "gatsby-source-contentful",
+    options: {
+      spaceId: `${process.env.CONTENTFUL_SPACE_ID}`,
+      accessToken: `${process.env.CONTENTFUL_ACCESS_TOKEN}`
     }
+  },
+  {
+    resolve: `gatsby-plugin-styled-components`,
+    options: {
+      // Add any options here
+    },
+  }
   ]
 };
