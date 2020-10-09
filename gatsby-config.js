@@ -4,7 +4,10 @@
  * See: https://www.gatsbyjs.com/docs/gatsby-config/
  */
 
-const dotenv = require("dotenv");
+if (process.env.NODE_ENV === 'development' || !process.env.NODE_ENV) {
+  require('dotenv').config({ path: './.env.development' })
+}
+
 
 if (process.env.ENVIRONMENT !== "production") {
   dotenv.config();
@@ -20,6 +23,9 @@ const {
 } = process.env;
 
 module.exports = {
+  siteMetadata: {
+    title: `Design + Code`,
+  },
   plugins: [{
     resolve: "gatsby-source-contentful",
     options: {
