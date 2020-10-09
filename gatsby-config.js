@@ -8,11 +8,6 @@ if (process.env.NODE_ENV === 'development' || !process.env.NODE_ENV) {
   require('dotenv').config({ path: './.env.development' })
 }
 
-
-if (process.env.ENVIRONMENT !== "production") {
-  dotenv.config();
-}
-
 if (process.env.NODE_ENV === 'development') {
   process.env.GATSBY_WEBPACK_PUBLICPATH = '/'
 }
