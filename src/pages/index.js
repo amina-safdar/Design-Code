@@ -70,7 +70,7 @@ export default function Home() {
           </div>
         </div>
         <div className="Cards">
-          <h2>11 courses, more coming</h2>
+          <h2>4 courses, more coming</h2>
           <div className="CardGroup">
             <Card
               title="Design System"
